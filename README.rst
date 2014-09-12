@@ -14,7 +14,7 @@ Simple Binary Search Tree
 
 Simple Binary Search Tree is a simple implementation of a binary search tree
 
-* Free software: BSD license
+* Free software: MIT license
 * Documentation: https://simplebst.readthedocs.org.
 
 Features
