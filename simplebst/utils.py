@@ -21,8 +21,3 @@ def insert_node(root, val):
             return root.set_right(Node(val))
         else:
             return insert_node(root.get_right(), val)
-
-# TODO just testing here
-# but implement in-order, pre-order, etc.
-def print_tree(root):
-    print(root.get_value())
