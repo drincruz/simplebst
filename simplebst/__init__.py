@@ -3,6 +3,9 @@ Binary Search Tree
 
 """
 
+import pkg_resources
+
+
 class Node(object):
     """
     Data structure to represent a
