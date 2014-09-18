@@ -6,9 +6,6 @@ Binary Search Tree
 import pkg_resources
 
 
-__version__ = pkg_resources.require("simplebst")[0].version
-
-
 class Node(object):
     """
     Data structure to represent a
