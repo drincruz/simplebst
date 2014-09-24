@@ -44,11 +44,11 @@ def post_order_nodes(root):
     root - The root of the tree to traverse
     """
     if root.get_left():
-        for node in in_order_nodes(root.get_left()):
+        for node in post_order_nodes(root.get_left()):
             yield node
 
     if root.get_right():
-        for node in in_order_nodes(root.get_right()):
+        for node in post_order_nodes(root.get_right()):
             yield node
 
     yield root
