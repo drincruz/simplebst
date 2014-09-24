@@ -75,3 +75,38 @@ In-order traversals
         # You can now iterate the ordered_list
         for node in ordered_list:
             print(node.get_value())
+
+Post-order traversals
+
+    post_order_nodes generator::
+
+        from simplebst.traversals import post_order_nodes
+
+        # Use a generator to get all nodes in post-order
+        for node in post_order_nodes(tree):
+            print(node.get_value())
+
+        # You _should_ get the following:
+        # 11
+        # 18
+        # 17
+        # 53
+        # 27
+        # 23
+
+
+    post_order_list::
+
+        from simplebst.traversals import post_order_list
+
+        # We need to store the values in a list,
+        # so we'll create an empty one
+        post_ordered_list = []
+
+        # post_order_list will modify post_ordered_list with
+        # Node()'s from the tree in post-order
+        post_order_list(tree, posot_ordered_list)
+
+        # You can now iterate the ordered_list
+        for node in post_ordered_list:
+            print(node.get_value())
