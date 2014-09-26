@@ -65,7 +65,6 @@ class TestSimplebstTraversals(object):
         for i, val in enumerate(in_order_nodes(self.root)):
             assert _expected_values[i] == val.get_value()
 
-
     def test_post_order_list(self):
         """
 
@@ -84,3 +83,13 @@ class TestSimplebstTraversals(object):
 
         assert len(_expected_list) == len(_output_list)
         assert _expected_list == _post_order_output
+
+    def test_post_order_nodes(self):
+        """
+        Test post_order_nodes() generator
+
+        """
+        _expected_values = [13, 5, 103, 57, 23]
+
+        for i, val in enumerate(post_order_nodes(self.root)):
+            assert _expected_values[i] == val.get_value()
