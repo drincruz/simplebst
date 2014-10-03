@@ -72,6 +72,40 @@ def post_order_list(root, lst):
     lst.append(root)
 
 
+def pre_order_nodes(root):
+    """
+    Pre-order traversal of tree
+    that returns a generator object
+
+    Keyword arguments:
+    root - The root of the tree to traverse
+    """
+    yield root
+
+    if root.get_left():
+        for node in pre_order_nodes(root.get_left()):
+            yield node
+
+    if root.get_right():
+        for node in pre_order_nodes(root.get_right()):
+            yield node
+
+
+def pre_order_list(root, lst):
+    """
+    Pre-order traversal of tree
+    that builds a list
+
+    Keyword arguments:
+    root - The root of the tree to traverse
+    """
+    if None is root:
+        return
+    lst.append(root)
+    pre_order_list(root.get_left(), lst)
+    pre_order_list(root.get_right(), lst)
+
+
 def level_order_nodes(root):
     """
     Level-order traversal of tree
