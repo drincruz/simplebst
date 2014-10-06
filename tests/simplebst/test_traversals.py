@@ -9,6 +9,7 @@ from simplebst import Node
 from simplebst.traversals import (
     in_order_list, in_order_nodes,
     level_order_nodes, level_order_list,
+    pre_order_nodes, pre_order_list,
     post_order_list, post_order_nodes)
 
 from simplebst.utils import insert_node
@@ -96,6 +97,36 @@ class TestSimplebstTraversals(object):
         for i, val in enumerate(post_order_nodes(self.root)):
             assert _expected_values[i] == val.get_value()
 
+    def test_pre_order_nodes(self):
+        """
+        Test pre_order_nodes() generator
+
+        """
+        _expected_values = [23, 5, 13, 57, 103]
+
+        for i, val in enumerate(pre_order_nodes(self.root)):
+            assert _expected_values[i] == val.get_value()
+
+    def test_pre_order_list(self):
+        """
+        Test pre_order_list() builds a proper list
+
+        :return:
+        """
+        _expected_list = [23, 5, 13, 57, 103]
+
+        _output_list = []
+
+        # Call pre_order_list to test
+        pre_order_list(self.root, _output_list)
+
+        # We just want to test the values
+        # so make a list from the list of objects
+        _pre_order_output = [x.get_value() for x in _output_list]
+
+        assert len(_expected_list) == len(_output_list)
+        assert _expected_list == _pre_order_output
+
     def test_level_order_nodes(self):
         """
         Test level_order_nodes() generator
@@ -123,3 +154,4 @@ class TestSimplebstTraversals(object):
 
         assert len(_expected_list) == len(_level_order_output)
         assert _expected_list == _level_order_output
+
