@@ -76,6 +76,35 @@ In-order traversals
         for node in ordered_list:
             print(node.get_value())
 
+
+Level-order traversals
+
+    level_order_nodes generator::
+
+        from simplebst.traversals import level_order_nodes
+
+        # Use a generator to get all nodes in level-order
+        for node in level_order_nodes(tree):
+            print(node.get_value())
+
+        # You _should_ get the following:
+        # 23
+        # 17
+        # 27
+        # 11
+        # 18
+        # 53
+
+
+    level_order_list::
+
+        from simplebst.traversals import level_order_list
+
+        # level_order_list() returns a list
+        # so we can iterate it like so
+        for node in level_order_list(tree):
+            print(node.get_value())
+
 Post-order traversals
 
     post_order_nodes generator::
