@@ -21,3 +21,18 @@ def insert_node(root, val):
             return root.set_right(Node(val))
         else:
             return insert_node(root.get_right(), val)
+
+
+def tree_height(node):
+    """
+    Get the height of a tree
+
+    :param node:
+    :return:
+    """
+    if None is node:
+        return -1
+    else:
+        return max(
+            tree_height(node.get_left()),
+            tree_height(node.get_right()) + 1)
