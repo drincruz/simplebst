@@ -13,11 +13,19 @@ History
 
 * Code cleanup and updated utils and traversals
 
-
 0.3.0 (2014-10-08)
 ---------------------
 
 * Added the following traversals:
-    Pre-order
-    Post-order
-    Level-order
+    - Pre-order
+
+    - Post-order
+
+    - Level-order
+
+0.4.0 (2014-10-16)
+---------------------
+
+* Added tree_height() util
+
+* Added insert_node() unit tests that I missed previously (yay for code coverage!)
