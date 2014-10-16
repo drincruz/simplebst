@@ -174,3 +174,15 @@ Post-order traversals
         # You can now iterate the ordered_list
         for node in post_ordered_list:
             print(node.get_value())
+
+Useful utility functions
+
+    tree_height::
+
+        from simplebst.utils import tree_height
+
+        # Get the height of the tree we've been using
+        height = tree_height(tree)
+        print(height)
+
+        # You should get 2
