@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='simplebst',
-    version='0.3.0',
+    version='0.4.0',
     description='Simple Binary Search Tree is a simple implementation of a binary search tree',
     long_description=readme + '\n\n' + history,
     author='Adrian Cruz',
