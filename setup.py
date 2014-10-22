@@ -12,11 +12,10 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 requirements = [
-    # TODO: put package requirements here
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'nose>=1.3.4'
 ]
 
 setup(
@@ -49,6 +48,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    test_suite='tests',
+    setup_requires=requirements,
+    test_suite='nose.collector',
     tests_require=test_requirements
 )
