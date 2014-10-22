@@ -29,3 +29,8 @@ History
 * Added tree_height() util
 
 * Added insert_node() unit tests that I missed previously (yay for code coverage!)
+
+0.4.1 (2014-10-22)
+---------------------
+
+* Updated setup.py to support nose as its test suite So ```python setup.py test``` can be run successfully.
