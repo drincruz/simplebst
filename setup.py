@@ -12,16 +12,15 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 requirements = [
-    # TODO: put package requirements here
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'nose>=1.3.4'
 ]
 
 setup(
     name='simplebst',
-    version='0.4.0',
+    version='0.4.1',
     description='Simple Binary Search Tree is a simple implementation of a binary search tree',
     long_description=readme + '\n\n' + history,
     author='Adrian Cruz',
@@ -49,6 +48,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    test_suite='tests',
+    setup_requires=requirements,
+    test_suite='nose.collector',
     tests_require=test_requirements
 )
