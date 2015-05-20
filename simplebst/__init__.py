@@ -3,8 +3,6 @@ Binary Search Tree
 
 """
 
-import pkg_resources
-
 
 class Node(object):
     """
